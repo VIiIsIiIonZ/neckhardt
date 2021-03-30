@@ -1,10 +1,10 @@
-export default function Todo() {
+export default function Todo(props) {
     return (
         <li className="todo stack-small">
             <div className="c-cb">
-                <input id="todo-0" type="checkbox" defaultChecked={true} />
-                <label className="todo-label" htmlFor="todo-0">
-                    Eat
+                <input id={props.id} type="checkbox" defaultChecked={props.completed} />
+                <label className="todo-label" htmlFor={props.id}>
+                    {props.name}
                 </label>
             </div>
             <div className="btn-group">
