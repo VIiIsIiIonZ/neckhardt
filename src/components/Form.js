@@ -1,6 +1,15 @@
-export default function Form() {
+import { useState } from "react";
+
+export default function Form(props) {
+    const [name, setName] = useState(0);
+    function handleSubmit(e) {
+        e.preventDefault();
+        setName((10+10));
+        console.log(name);
+        props.onSubmit(name);
+    }
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <h2 className="label-wrapper">
                 <label htmlFor="new-todo-input" className="label__lg">
                     What needs to be done?
