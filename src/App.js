@@ -11,6 +11,7 @@ function App(props) {
         setTasks([...tasks, newTask]);
     }
 
+
     const taskList = tasks.map(task => (
         <Todo
             id={task.id}
